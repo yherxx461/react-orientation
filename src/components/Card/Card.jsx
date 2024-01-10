@@ -1,3 +1,10 @@
+// To use state, we need hooks
+import {} from 'react';
+  // Hooks are behavior that using involve state
+    // useState(0)
+
+
+
 function Card() {
     return (
         <div className="card">
