@@ -6,7 +6,7 @@ import {useState} from 'react';
 
 
 
-function Card() {
+function Card({globalName}) {
   const [myName, setMyName] = useState('Ying'); //function call gives us back an array -- inside the paranthesis must be mused as is
 
   // Anything anything in this change, this will change the component
@@ -18,8 +18,9 @@ function Card() {
   }
     return (
         <div className="card">
+          {/* create state to increment the count */}
         <button>count is 0</button>
-        <p>{myName}</p>
+        <p>{props.globalName ? props.globalName: myName}</p>
         <button onClick={clickChangeName}>Change Name</button> 
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR

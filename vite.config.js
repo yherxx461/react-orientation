@@ -17,8 +17,12 @@
 // `list -- list item 1, list item 2`
 // `footer`
 
-// STAGE
-// 
+// STATE
+// useState(0)
+
+// React Video: https://www.youtube.com/watch?v=dQw4w9WgXcQ 
+// React Operator Conditional: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator
+// React Hooks Docs: https://react.dev/reference/react/useState
 
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'

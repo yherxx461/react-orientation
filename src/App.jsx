@@ -1,4 +1,4 @@
-
+import { useState } from 'react';
 
 
 
@@ -9,15 +9,22 @@ import Header from './components/Header/Header'
 import './App.css'
 
 function App() {
-  // const [count, setCount] = useState(0) Myron said to delete this line
+  const [globalName, setGlobalName] = useState();
+
+  const clickGlobalNameChange = () => {
+    setGlobalName('GLOBAL!!!');
+  };
+
   return (
     <>
     {/* Header component */}
       <Header/>
-      
-      <Card />
-      <Card />
 
+      <button onClick={clickGlobalNameChange}>CHANGE ALL NAMES</button>
+      
+      <Card globalName={globalName} /> 
+      <Card globalName={globalName} /> 
+ 
       <Footer />
     </>
   )
