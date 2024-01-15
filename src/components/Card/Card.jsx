@@ -23,7 +23,8 @@ function Card({globalName}) {
     return (
         <div className="card">
           {/* create state to increment the count */}
-        <button onClick={countUp}>count is {count}</button>
+        <button onClick={countUp}>count is {count}</button> 
+        {/* For some reason, I found it so hard to increment the button. NOTE: make sure the starting number is also {count} */}
         <p>{globalName ? globalName: myName}</p>
         <button onClick={clickChangeName}>Change Name</button> 
         <p>
