@@ -4,10 +4,8 @@ import {useState} from 'react';
   // Hooks are behavior that using involve state
     // useState(0)
 
-
-
 function Card({globalName}) {
-  const [myName, setMyName] = useState('Ying'); //function call gives us back an array -- inside the paranthesis must be mused as is
+  const [myName, setMyName] = useState('Ying'); //function call gives us back an array -- inside the paranthesis must be used as is
 
   // Anything anything in this change, this will change the component
 
@@ -16,11 +14,17 @@ function Card({globalName}) {
     console.log('Test');
     setMyName('YING');
   }
+  const [count, setCount] = useState(0);
+  
+  function countUp() {
+    console.log('adding');
+    setCount(count + 1);
+  };
     return (
         <div className="card">
           {/* create state to increment the count */}
-        <button>count is 0</button>
-        <p>{props.globalName ? props.globalName: myName}</p>
+        <button onClick={countUp}>count is {count}</button>
+        <p>{globalName ? globalName: myName}</p>
         <button onClick={clickChangeName}>Change Name</button> 
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
